@@ -112,6 +112,7 @@ function CTAButton({ children, variant = 'primary', size = 'lg', className = '',
   const variants = {
     primary: 'bg-accent-500 hover:bg-accent-600 text-white shadow-lg shadow-accent-500/25 hover:shadow-accent-500/40 hover:-translate-y-0.5',
     secondary: 'bg-white hover:bg-gray-50 text-primary-700 border-2 border-primary-200 hover:border-primary-300',
+    outline: 'bg-transparent hover:bg-white/10 text-white border-2 border-white/30 hover:border-white/50',
     dark: 'bg-primary-700 hover:bg-primary-800 text-white shadow-lg hover:-translate-y-0.5',
   }
   return <button className={`${base} ${sizes[size]} ${variants[variant]} ${className}`} {...props}>{children}</button>
@@ -191,10 +192,10 @@ function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto lg:mx-0">
-              <CTAButton onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })} className="flex-1">
+              <CTAButton onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}>
                 Request a Booking <ArrowRight className="w-5 h-5" />
               </CTAButton>
-              <CTAButton variant="secondary" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="flex-1 !border-white/30 !text-white hover:!bg-white/10">
+              <CTAButton variant="outline" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
                 My Story
               </CTAButton>
             </div>
