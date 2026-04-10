@@ -138,12 +138,12 @@ function Navbar() {
             <Sparkles className={`w-7 h-7 ${scrolled ? 'text-accent-500' : 'text-white'}`} />
             <span className={`font-heading text-xl font-bold ${scrolled ? 'text-primary-800' : 'text-white'}`}>Pristine<span className="text-accent-400">NYC</span></span>
           </a>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5 lg:gap-7">
             {NAV_LINKS.map(l => (
-              <a key={l.href} href={l.href} className={`text-sm font-medium transition-colors hover:text-accent-500 ${scrolled ? 'text-gray-600' : 'text-white/90'}`}>{l.label}</a>
+              <a key={l.href} href={l.href} className={`text-sm font-medium transition-colors whitespace-nowrap hover:text-accent-500 ${scrolled ? 'text-gray-600' : 'text-white/90'}`}>{l.label}</a>
             ))}
-            <a href="#booking" className="ml-2">
-              <CTAButton size="sm">Request a Booking</CTAButton>
+            <a href="#booking" className="ml-1 flex-shrink-0">
+              <CTAButton size="sm">Book Now</CTAButton>
             </a>
           </div>
           <button onClick={() => setOpen(!open)} className={`md:hidden p-2 ${scrolled ? 'text-primary-800' : 'text-white'}`} aria-label="Menu">
