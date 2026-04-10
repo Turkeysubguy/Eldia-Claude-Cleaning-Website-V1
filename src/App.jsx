@@ -191,11 +191,11 @@ function Hero() {
               I'm Eldia — I personally clean every apartment I book. No rotating strangers, no call centers. Just one person who learns your home and takes pride in it.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto lg:mx-0">
-              <CTAButton onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}>
+            <div className="flex gap-3 max-w-md mx-auto lg:mx-0">
+              <CTAButton size="md" onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })} className="flex-1 sm:flex-none">
                 Request a Booking <ArrowRight className="w-5 h-5" />
               </CTAButton>
-              <CTAButton variant="outline" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+              <CTAButton size="md" variant="outline" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
                 My Story
               </CTAButton>
             </div>
